@@ -8,7 +8,6 @@ Gesture2Health is not just a technological solution, but also a social one. The 
 * [Technologies and Tools](#technologies-and-tools)
 * [Setup](#setup)
 * [Demo Video](#demo-video)
-* [Status](#status)
 * [contact](#contact)
 
 ## General Info
@@ -34,7 +33,7 @@ The project was implemented in Google Colab:
 ```
 - Download the dataset:
     - The dataset is present in the folder named `Basic_Signs_Dataset`
-    - This folder consists of `x` sub-folders, where each sub-folder consists of video samples for one sign language to be trained.
+    - This folder consists of `16` sub-folders (one sub-folder for one gesture) , where each sub-folder consists of video samples for one sign language to be trained.
  - Run each cell of `DTW.ipynb` file one by one.
     - First, we extract 18 frames of each video and then extract keypoints from each frame using mediapipe. Pose consists of 99 keypoints, left hand and right hand each consist of 63 keypoints. So the total keypoints extracted are 225.
     - After extracting the keypoints, we save it to `train_output.csv` file, where first 225 columns are of keypoints and 226th column consists of frame numbers of each video and 227th coulmn consists of the labels for the corresponding videos.
