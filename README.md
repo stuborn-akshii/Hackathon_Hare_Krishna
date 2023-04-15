@@ -40,8 +40,11 @@ The project was implemented in Google Colab:
     - After extracting the keypoints, we save it to `train_output.csv` file, where first 225 columns are of keypoints and 226th column consists of frame numbers of each video and 227th coulmn consists of the labels for the corresponding videos.
     - After that we perform the preprocessing and then divide the dataset i.e, csv file into train and test sets(70:30)
     - After that we apply the `DTWClassifier` and train it on our dataset.
+    
 ## Demo Video
+You find the demo video of our project works over [here]()
 
 ## Status
+
 
 ## Contact
