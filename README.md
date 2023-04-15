@@ -5,7 +5,6 @@ Gesture2Health is an innovative project that aims to bridge the communication ga
 Gesture2Health is not just a technological solution, but also a social one. The project is designed to promote greater awareness and understanding of the needs of hearing-impaired patients in healthcare settings and to promote more inclusive and equitable healthcare services. By developing a sign language recognition model trained on an Indian dataset for the healthcare domain, Gesture2Health is helping to bridge the gap between hearing-impaired patients and healthcare professionals, and creating a more just and equitable healthcare system for all.
     
 ## Table of Contents
-* [General Info](#general-info)
 * [Technologies and Tools](#technologies-and-tools)
 * [Setup](#setup)
 * [Demo Video](#demo-video)
