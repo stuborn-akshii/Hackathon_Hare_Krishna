@@ -16,22 +16,28 @@ Gesture2Health is an innovative project that aims to bridge the communication ga
 ## General Info
 
 ## Technologies And Tools
+The following technologies and tools were used for the implemetation of our project:
 - Python
 - Mediapipe
 - OpenCV
 - TensorFlow
 - Keras
 - NumPy
+- Fastdtw
 
 ## Installation
+Install the required dependencies: 
 ```python
 !pip install mediapipe
 !pip install opencv-contrib-python
 !pip install tensorflow
+!pip install fastdtw 
 ```
 
 ## Setup
-
+The project was implemented in Google Colab:
+- Install the required dependencies mentioned above
+- 
 ## Demo Video
 
 ## Process
