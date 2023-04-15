@@ -5,7 +5,6 @@ Gesture2Health is an innovative project that aims to bridge the communication ga
 ## Table of Contents
 * [General Info](#general-info)
 * [Technologies and Tools](#technologies-and-tools)
-* [Installation](#installation)
 * [Setup](#setup)
 * [Demo Video](#demo-video)
 * [Process](#process)
@@ -25,19 +24,20 @@ The following technologies and tools were used for the implemetation of our proj
 - NumPy
 - Fastdtw
 
-## Installation
-Install the required dependencies: 
+## Setup
+The project was implemented in Google Colab:
+- Install the required dependencies mentioned below:
 ```python
 !pip install mediapipe
 !pip install opencv-contrib-python
 !pip install tensorflow
 !pip install fastdtw 
 ```
-
-## Setup
-The project was implemented in Google Colab:
-- Install the required dependencies mentioned above
-- 
+- Download the dataset:
+    - The dataset is present in the folder named `Basic_Signs_Dataset`
+    - This folder consists of `x` sub-folders, where each sub-folder consists of video samples for one sign language to be trained.
+ - Run each cell of `DTW.ipynb` file one by one.
+    - First, we extract 18 frames of each video and then extract keypoints from each frame using mediapipe
 ## Demo Video
 
 ## Process
