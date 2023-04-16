@@ -38,8 +38,7 @@ The following technologies and tools were used for the implemetation of our proj
     - After that we apply the `DTWClassifier` and train it on our dataset.
     
 ## Demo Video
+https://user-images.githubusercontent.com/90503933/232321349-fe5abdb9-e94f-4913-859e-d11afe4c0ce8.mp4
 
-
-You can find the demo video of how our project works over [here](https://drive.google.com/file/d/1z6spnmfCDmeTQMubK4Ho31uN-vC-WC2F/view?usp=share_link)
 
 ## Contact
