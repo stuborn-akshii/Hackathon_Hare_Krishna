@@ -40,9 +40,6 @@ The following technologies and tools were used for the implemetation of our proj
 ## Demo Video
 
 
-Uploading Gesture2Health.mp4…
-
-
 You can find the demo video of how our project works over [here](https://drive.google.com/file/d/1z6spnmfCDmeTQMubK4Ho31uN-vC-WC2F/view?usp=share_link)
 
 ## Contact
