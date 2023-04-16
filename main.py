@@ -65,14 +65,14 @@ def upload_video():
         # Handle video upload here
         video = request.files['video']
         # Save the video to the desired location
-        video.save(r'C:\Users\Shatakshi\Downloads\ISLT WEBSITE\Videos\test1.mp4')
+        video.save(r'\Videos\test1.mp4')
         
         msg="Video uploaded"
         output="Help"
-        model_path=r"C:\Users\Shatakshi\Downloads\ISLT WEBSITE\BiLSTM_7619_6389_50_hc.h5"
+        model_path=r"BiLSTM_7619_6389_50_hc.h5"
         model = load_model(model_path)
         
-        output=predict_video("test",r'C:\Users\Shatakshi\Downloads\ISLT WEBSITE\Videos\test1.mp4',model)
+        output=predict_video("test",r'\Videos\test1.mp4',model)
         # Update with the appropriate URL
         return render_template('translate.html',mssg=msg, output=output)
     return render_template('translate.html',mssg=msg)
@@ -82,7 +82,7 @@ def predict_video(video_name,video_path,model):
   track=0
   col.extend(["frame_number","video_name","output_class"])
   df_predict=pd.DataFrame(columns=col)
-  df_predict,track=storeInDataFrame(r'C:\Users\Shatakshi\Downloads\ISLT WEBSITE\Videos',video_name,df_predict,track,video_path)
+  df_predict,track=storeInDataFrame(r'\Videos',video_name,df_predict,track,video_path)
   df_predict.info()
   ds_x_predict=df_predict.iloc[:,:-3] #last 3 columns have frame no, video name and video class
   print(ds_x_predict.shape)
