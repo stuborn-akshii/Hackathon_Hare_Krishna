@@ -18,20 +18,21 @@ The following technologies and tools were used for the implemetation of our proj
 - TensorFlow
 - Keras
 - NumPy
+- Flask
+- HTML5
 
-## Setup
-The project was implemented in Google Colab:
-- Install the required dependencies mentioned below:
-```python
-pip install Flask
-pip install tensorflow
-pip install numpy
-pip install pandas
-pip install mediapipe
-pip install scikit-learn
-pip install opencv-contrib-python
-```
-
+## Install the required dependencies
+    -  Install the required dependencies mentioned below:
+        ```python
+        pip install Flask
+        pip install tensorflow
+        pip install numpy
+        pip install pandas
+        pip install mediapipe
+        pip install scikit-learn
+        pip install opencv-contrib-python
+        ```
+## Running the project: 
 - Download the dataset:
     - The dataset is present in the folder named `Basic_Signs_Dataset`
     - This folder consists of `8` sub-folders (one sub-folder for one gesture) , where each sub-folder consists of video samples for one sign language to be trained.
