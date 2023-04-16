@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Translate</title>
+    <style>
+        /* Add custom styles here */
+    </style>
+</head>
+<body>
+    <header class="text-gray-600 body-font">
+        <!-- Your header content here -->
+    </header>
+    <div class="container mx-auto mt-10">
+        <div class="row">
+            <div class="column">
+                <h2 class="text-2xl font-medium mb-4">Upload Video</h2>
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <input type="file" id="videoFile" name="videoFile" accept="video/*" class="mb-2">
+                    <button type="submit" class="bg-purple-500 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded">Upload</button>
+                </form>
+            </div>
+            <div class="column">
+                <h2 class="text-2xl font-medium mb-4">Preview Video</h2>
+                <video id="previewVideo" controls class="w-full h-auto mb-2"></video>
+                <p id="noVideoMsg" class="text-red-500 hidden">No video uploaded</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get DOM elements
+        var videoFileInput = document.getElementById('videoFile');
+        var previewVideo = document.getElementById('previewVideo');
+        var noVideoMsg = document.getElementById('noVideoMsg');
+
+        // Listen for form submit event
+        document.getElementById('uploadForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Check if video file is selected
+            if (videoFileInput.files.length === 0) {
+                noVideoMsg.classList.remove('hidden');
+                previewVideo.removeAttribute('src');
+                return;
+            }
+
+            // Hide no video message
+            noVideoMsg.classList.add('hidden');
+
+            // Get video file and set it as source for preview
+            var videoFile = videoFileInput.files[0];
+            var videoUrl = URL.createObjectURL(videoFile);
+            previewVideo.src = videoUrl;
+        });
+    </script>
+</body>
+</html>
