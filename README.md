@@ -23,14 +23,9 @@ The following technologies and tools were used for the implemetation of our proj
 
 ## Install the required dependencies
 -  Install the required dependencies mentioned below:
+
     ```python
-        pip install Flask
-        pip install tensorflow
-        pip install numpy
-        pip install pandas
-        pip install mediapipe
-        pip install scikit-learn
-        pip install opencv-contrib-python
+     pip install -r requirements.txt
     ```
 ## Running the project: 
 - Download the dataset:
@@ -43,6 +38,11 @@ The following technologies and tools were used for the implemetation of our proj
     - After that we apply the `DTWClassifier` and train it on our dataset.
     
 ## Demo Video
+
+
+Uploading Gesture2Health.mp4…
+
+
 You can find the demo video of how our project works over [here](https://drive.google.com/file/d/1z6spnmfCDmeTQMubK4Ho31uN-vC-WC2F/view?usp=share_link)
 
 ## Contact
