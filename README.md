@@ -24,13 +24,13 @@ The following technologies and tools were used for the implemetation of our proj
 ## Install the required dependencies
     -  Install the required dependencies mentioned below:
         ```python
-        pip install Flask
-        pip install tensorflow
-        pip install numpy
-        pip install pandas
-        pip install mediapipe
-        pip install scikit-learn
-        pip install opencv-contrib-python
+            pip install Flask
+            pip install tensorflow
+            pip install numpy
+            pip install pandas
+            pip install mediapipe
+            pip install scikit-learn
+            pip install opencv-contrib-python
         ```
 ## Running the project: 
 - Download the dataset:
