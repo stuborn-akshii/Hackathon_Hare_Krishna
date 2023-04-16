@@ -4,3 +4,4 @@ numpy
 pandas
 mediapipe
 scikit-learn
+flask_navigation
