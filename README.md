@@ -22,16 +22,16 @@ The following technologies and tools were used for the implemetation of our proj
 - HTML5
 
 ## Install the required dependencies
-    -  Install the required dependencies mentioned below:
-        ```python
-            pip install Flask
-            pip install tensorflow
-            pip install numpy
-            pip install pandas
-            pip install mediapipe
-            pip install scikit-learn
-            pip install opencv-contrib-python
-        ```
+-  Install the required dependencies mentioned below:
+    ```python
+        pip install Flask
+        pip install tensorflow
+        pip install numpy
+        pip install pandas
+        pip install mediapipe
+        pip install scikit-learn
+        pip install opencv-contrib-python
+    ```
 ## Running the project: 
 - Download the dataset:
     - The dataset is present in the folder named `Basic_Signs_Dataset`
