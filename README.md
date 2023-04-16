@@ -41,7 +41,7 @@ The project was implemented in Google Colab:
     - After that we apply the `DTWClassifier` and train it on our dataset.
     
 ## Demo Video
-You can find the demo video of how our project works over [here]()
+You can find the demo video of how our project works over [here](https://drive.google.com/file/d/1z6spnmfCDmeTQMubK4Ho31uN-vC-WC2F/view?usp=share_link)
 
 ## Status
 
