@@ -10,8 +10,6 @@ Gesture2Health is not just a technological solution, but also a social one. The 
 * [Demo Video](#demo-video)
 * [contact](#contact)
 
-## General Info
-
 ## Technologies And Tools
 The following technologies and tools were used for the implemetation of our project:
 - Python
@@ -25,10 +23,15 @@ The following technologies and tools were used for the implemetation of our proj
 The project was implemented in Google Colab:
 - Install the required dependencies mentioned below:
 ```python
-!pip install mediapipe
-!pip install opencv-contrib-python
-!pip install tensorflow
+pip install Flask
+pip install tensorflow
+pip install numpy
+pip install pandas
+pip install mediapipe
+pip install scikit-learn
+pip install opencv-contrib-python
 ```
+
 - Download the dataset:
     - The dataset is present in the folder named `Basic_Signs_Dataset`
     - This folder consists of `8` sub-folders (one sub-folder for one gesture) , where each sub-folder consists of video samples for one sign language to be trained.
@@ -40,8 +43,5 @@ The project was implemented in Google Colab:
     
 ## Demo Video
 You can find the demo video of how our project works over [here]()
-
-## Status
-
 
 ## Contact
