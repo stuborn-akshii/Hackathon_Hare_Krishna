@@ -69,7 +69,7 @@ def upload_video():
         
         msg="Video uploaded"
         output="Help"
-        model_path=r"C:\Users\Shatakshi\Downloads\ISLT WEBSITE\Diksha.h5"
+        model_path=r"C:\Users\Shatakshi\Downloads\ISLT WEBSITE\model.h5"
         model = load_model(model_path)
         
         output=predict_video("test",r'C:\Users\Shatakshi\Downloads\ISLT WEBSITE\Videos\test1.mp4',model)
