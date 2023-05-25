@@ -1,1 +1,6 @@
 runtime: python37
+
+entrypoint: gunicorn -b :$PORT main:app
+
+env_variables:
+  BUCKET_NAME: islt_videoip
