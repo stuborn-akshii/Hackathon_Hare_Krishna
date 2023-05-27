@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Gesture2Health</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+<link href="{{ url_for('static', filename='img/favicon.png') }}" rel="icon">
+<link href="{{ url_for('static', filename='img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+<!-- Bootstrap CSS (optional) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!-- jQuery and Popper.js (optional) -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"></script>
+
+<!-- Bootstrap JS (optional) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
+
+<!-- Other meta tags -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Tailwind CSS -->
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+
+  <style>
+    .card-container {
+      width: 90rem;
+      perspective: 200rem;
+    }
+
+    .card-container {
+      perspective: 1000px;
+    }
+
+    .card-container,
+    .card {
+      height: 400px;
+    }
+
+    .card-container.card-flipped .card-front {
+      transform: rotateY(180deg);
+    }
+
+    .card-container.card-flipped .card-back {
+      transform: rotateY(0);
+    }
+
+    .card {
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    .card-front,
+    .card-back {
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .card-header,
+    .card-footer {
+      background-color: rgb(255, 217, 141);
+      color: black;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 20px;
+    }
+
+    .card-body {
+      color: black;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 20px;
+      background-color: rgb(255, 240, 176);
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+    }
+
+    iframe {
+      width: 100%;
+      height: 90%;
+    }
+
+    .btn {
+      font-size: 20px;
+    }
+
+
+
+
+
+
+    .navbare a {
+      float: left;
+      color: rgb(3, 3, 3);
+      text-align: center;
+      padding: 500px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .navbare a:hover {
+      background-color: #3a3333;
+      color: rgba(40, 38, 38, 0.295);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .row {
+      display: flex;
+    }
+
+    /* Create two equal columns that sits next to each other */
+    .column {
+      flex: 50%;
+      padding: 10px;
+      height: 300px;
+      /* Should be removed. Only for demonstration */
+    }
+
+    .navbare {
+
+      background-color: rgba(255, 255, 255, 0.541);
+      text-align: center;
+      height: auto;
+      padding-bottom: 10px;
+      margin: 15px;
+    }
+
+    .column {
+
+      background-color: rgba(3, 3, 3, 0.541);
+      text-align: center;
+      height: auto;
+      padding-bottom: 10px;
+      margin: 6px;
+    }
+
+    #cholan {
+
+      background-color: rgba(3, 3, 3, 0.541);
+      text-align: center;
+      font-size: 40px;
+      height: auto;
+      border-radius: 30px;
+
+    }
+
+    .outputtext {
+
+      background-color: rgba(3, 3, 3, 0.541);
+
+      height: 430px;
+      width: auto;
+      margin-top: 20px;
+      border-radius: 30px;
+
+
+    }
+
+    #myTextarea {
+
+      background-color: rgb(255, 217, 141);
+
+      height: auto;
+      width: 900px;
+      height: 340px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 5%;
+    }
+
+    #inputvid {
+
+
+      background-color: rgb(255, 217, 141);
+
+      height: 50px;
+      border-radius: 30px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .image {
+      margin-top: 10px;
+    }
+
+    #start {
+      background-color: #ffc451;
+    }
+
+    #record {
+      background-color: #ffc451;
+    }
+
+    #play {
+      background-color: #ffc451;
+    }
+
+    #download {
+      background-color: #ffc451;
+    }
+
+    #gum {
+      background-color: transparent;
+      height: 400px;
+      width: 800px;
+      margin-top: 10px;
+      margin-left: 0px;
+    }
+
+    #recorded {
+      background-color: transparent;
+      height: 400px;
+      width: 800px;
+      margin-top: 10px;
+      margin-left: 0px;
+    }
+
+    .myDiv1 {
+      display: none;
+    }
+
+    .myDiv2 {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+      <a href="/home"><img src="{{ url_for('static', filename='g2hlogo.png') }}" width="200" height="95" style="margin-left: 50px;" class="d-inline-block align-top" alt=""></a>          <!-- <h1 class="logo me-auto me-lg-0"><a href="index.html">Gp<span>.</span></a></h1> -->
+      class="d-inline-block align-top" alt=""></a>
+      <!-- <h1 class="logo me-auto me-lg-0"><a href="index.html">Gp<span>.</span></a></h1> -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto" href="/home">Home</a></li>
+          <li><a class="nav-link scrollto" href="/home">About</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#services">Services</a></li>
+        <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li> -->
+          <li><a class="nav-link scrollto" href="/home">Team</a></li>
+          <li><a class="nav-link scrollto" href="/home">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="/translate" class="get-started-btn scrollto active">Translator</a>
+
+    </div>
+  </header><!-- End Header -->
+
+
+  </div>
+  <section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+        <div class="col-lg-12">
+            <h2 style="font-size: 60px; color: #ffc451; font-family: 'Times New Roman', Times, serif;">Indian Sign Language Translator</h2>
+          <!-- <div class="animate-character">
+          </div> -->
+          <p style="font-size: 30px; margin-top: 20px; font-family: 'Times New Roman', Times, serif; color: white;">
+            For translating Indian Sign Language Gestures you either upload a pre-recorded video and record a live video and submit it. The corresponding sign language will be displayed in the Output Section.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+  <section >
+    <select id="myselect">
+      <option value="Option1">Upload</option>
+      <option value="option2">WebCam</option>
+    </select>
+    <div id="buttonsContainer" style="margin-top: 10px;">
+      <button id="start">Start camera</button>
+      <button id="record" disabled>Record</button>
+      <button id="play" disabled>Play</button>
+      <button id="download" disabled>Download</button>
+    </div>
+    <div class="row">
+      <div class="col-md-6 d-flex justify-content-center">
+        <div class="col-sm-12" style="background-color:#ffffff;">
+          <div id="cholan" class="myDiv1" style="background-color: rgb(255, 217, 141); width: 900px; height: 570px">
+            <label for="signlanguague">Choose a Sign Language:</label>
+            <select name="signlanguague" id="signlanguague" style="width: 150px;background-color: #ffc451;height: 30px; font-size: 20px; margin-bottom: 8px;">
+              <option value="indian">Indian</option>
+            </select>
+    
+            <!-- Start of video -->
+            <div id="containera">
+              <video id="gum" playsinline autoplay muted></video>
+              <video id="recorded" playsinline loop></video>
+    
+             
+              <div>
+                <p id="echoCancellation"></p>
+              </div>
+              
+              <div>
+                <span id="errorMsg"></span>
+              </div>
+            </div>
+            <!-- End of video -->
+            
+  
+          </div>
+          <div id="inputvid" class="myDiv2" style="width: 900px; height:570px">
+            <a>{{mssg}}</a>
+            <form action="/" method="post" enctype="multipart/form-data" class="form">
+              <input type="file" name="video" id="video"
+                style="width: 500px; font-size: 25px;margin-top: 10px;margin-left: 30px;">
+              <input type="submit" value="Upload Video" name="submit"
+                style="width: 450px; font-size: 20px;margin-top: 10px;margin-left: 30px;">
+            </form>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-6 d-flex justify-content-center">
+        <div class="col-sm-12" style="background-color:#ffffff;">
+          <div class="cholan" style="background-color: rgb(255, 217, 141); width: 900px; height: 570px">
+            <label for="language">Choose a Language:</label>
+            <select name="language" id="language" style="width: 150px; height: 30px; background-color: #ffc451;font-size: 20px; margin-bottom: 8px;">
+              <option value="english">English</option>
+            </select>
+            
+            <h3>Output Text:</h3>
+            <div>
+              <textarea id="myTextarea" rows="4" cols="50">{{output}}</textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- rowend -->
+  </section>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+
+  <script>
+
+$(document).ready(function(){
+  $("#myselect").change(function(){
+    var name = $("#myselect").val();
+    console.log(name);
+    
+    $(".myDiv1, .myDiv2").hide();
+    $("#buttonsContainer").hide();
+    if(name == 'option2'){
+      $(".myDiv1").show();
+      $("#buttonsContainer").show();
+    }
+    else{
+      $(".myDiv2").show();
+      $("#buttonsContainer").hide();
+    }
+  }).change(); // Trigger the change event initially
+});
+
+    'use strict';
+
+    /* globals MediaRecorder */
+
+    let mediaRecorder;
+let recordedBlobs;
+
+const errorMsgElement = document.querySelector('span#errorMsg');
+const recordedVideo = document.querySelector('video#recorded');
+const recordButton = document.querySelector('button#record');
+const playButton = document.querySelector('button#play');
+const downloadButton = document.querySelector('button#download');
+
+recordButton.addEventListener('click', () => {
+  if (recordButton.textContent === 'Record') {
+    startRecording();
+  } else {
+    stopRecording();
+    recordButton.textContent = 'Record';
+    playButton.disabled = false;
+    downloadButton.disabled = false;
+  }
+});
+
+playButton.addEventListener('click', () => {
+  const superBuffer = new Blob(recordedBlobs, { type: 'video/webm' });
+  recordedVideo.src = null;
+  recordedVideo.srcObject = null;
+  recordedVideo.src = window.URL.createObjectURL(superBuffer);
+  recordedVideo.controls = true;
+  recordedVideo.play();
+  document.getElementById('gum').style.display = 'none'; // Hide the camera video
+});
+
+downloadButton.addEventListener('click', () => {
+  const blob = new Blob(recordedBlobs, {type: 'video/mp4'});
+  const url = window.URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.style.display = 'none';
+  a.href = url;
+  a.download = 'test1.mp4';
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => {
+    document.body.removeChild(a);
+    window.URL.revokeObjectURL(url);
+  }, 100);
+});
+
+
+function handleDataAvailable(event) {
+  console.log('handleDataAvailable', event);
+  if (event.data && event.data.size > 0) {
+    recordedBlobs.push(event.data);
+  }
+}
+
+function startRecording() {
+  recordedBlobs = [];
+  let options = { mimeType: 'video/webm;codecs=vp9,opus' };
+  try {
+    mediaRecorder = new MediaRecorder(window.stream, options);
+  } catch (e) {
+    console.error('Exception while creating MediaRecorder:', e);
+    errorMsgElement.innerHTML = `Exception while creating MediaRecorder: ${JSON.stringify(e)}`;
+    return;
+  }
+
+  console.log('Created MediaRecorder', mediaRecorder, 'with options', options);
+  recordButton.textContent = 'Stop Recording';
+  playButton.disabled = true;
+  downloadButton.disabled = true;
+  mediaRecorder.onstop = (event) => {
+    console.log('Recorder stopped: ', event);
+    console.log('Recorded Blobs: ', recordedBlobs);
+  };
+  mediaRecorder.ondataavailable = handleDataAvailable;
+  mediaRecorder.start();
+  console.log('MediaRecorder started', mediaRecorder);
+}
+
+function stopRecording() {
+  mediaRecorder.stop();
+}
+
+function handleSuccess(stream) {
+  recordButton.disabled = false;
+  console.log('getUserMedia() got stream:', stream);
+  window.stream = stream;
+
+  const gumVideo = document.querySelector('video#gum');
+  gumVideo.srcObject = stream;
+}
+
+async function init(constraints) {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+    handleSuccess(stream);
+  } catch (e) {
+    console.error('navigator.getUserMedia error:', e);
+    errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
+  }
+}
+
+document.querySelector('button#start').addEventListener('click', async () => {
+  const hasEchoCancellation = document.querySelector('#echoCancellation').checked;
+  const constraints = {
+    audio: {
+      echoCancellation: { exact: hasEchoCancellation },
+    },
+    video: {
+      width: 1280,
+      height: 720,
+    },
+  };
+  console.log('Using media constraints:', constraints);
+  await init(constraints);
+});
+
+  </script>
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='vendor/purecounter/purecounter_vanilla.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/php-email-form/validate.js') }}"></script>
+  
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  
+</body>
+
+</html>
