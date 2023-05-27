@@ -39,7 +39,7 @@ def home():
 
 @app.route('/translate', methods=['GET'])
 def translate():
-    return render_template('translator.html')
+    return render_template('translate.html')
 
 @app.route('/learn', methods=['GET'])
 def learn():
