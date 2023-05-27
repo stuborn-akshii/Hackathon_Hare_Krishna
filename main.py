@@ -37,25 +37,14 @@ nav = Navigation(app)
 def home():   
     return render_template('index.html')
 
-@app.route('/about', methods=['GET'])
-def about():
-    return render_template('about.html')
-
-@app.route('/contact', methods=['GET'])
-def contact():
-    return render_template('contact.html')
-
 @app.route('/translate', methods=['GET'])
 def translate():
-    return render_template('translate.html')
+    return render_template('translator.html')
 
 @app.route('/learn', methods=['GET'])
 def learn():
-    return render_template('learnislt.html')
+    return render_template('learnisl.html')
 
-@app.route('/isltfewwords', methods=['GET'])
-def isltfewwords():
-    return render_template('isltfewwords.html')
 
 # Prediction page
 @app.route('/', methods=['GET', 'POST'])
